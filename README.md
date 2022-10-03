@@ -1,2 +1,2 @@
-# ShopingCard-typescipt
-Shoping card with React and Typescript
+# ShoppingCart-typescipt
+Shopping cart with React and Typescript
