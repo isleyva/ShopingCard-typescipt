@@ -7,7 +7,7 @@ type StoreItemProps = {
     imgUrl:string
 }
 
-const StoreItem = ({id, name, price, imgUrl}) => {
+const StoreItem = ({id, name, price, imgUrl} : StoreItemProps) => {
   return (
     <div>StoreItem</div>
   )
