@@ -1,5 +1,5 @@
 import React from "react";
-import { Card } from "react-bootstrap"
+import { Card, Button } from "react-bootstrap"
 import formatCurrency from "../utilities/formatCurrency"
 
 type StoreItemProps = {
@@ -10,8 +10,9 @@ type StoreItemProps = {
 };
 
 const StoreItem = ({ id, name, price, imgUrl }: StoreItemProps) => {
-  return (
-    <Card>
+        const quantity = 0
+    return (
+    <Card className="h-100">
       <Card.Img
         variant="top"
         src={imgUrl}
@@ -25,6 +26,11 @@ const StoreItem = ({ id, name, price, imgUrl }: StoreItemProps) => {
         <span className="fs-2">{name}</span>
         <span className="ms-2">{formatCurrency(price)}</span>
         </Card.Title>
+        <div className="mt-auto">
+            {quantity === 0 ? (
+            <Button className="w-100">+ Add To Cart</Button>
+            ) :null}
+        </div>
       </Card.Body>
     </Card>
   );
